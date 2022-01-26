@@ -1,19 +1,17 @@
-# David Garcia & Redi Tola 
-# line 2
+# Redi's Branch
+# 1/26/2022 3:36PM
 
-# David test 
-# draft 1 only 
-
-# David branch 
 
 import serial
 baudrates = [9600, 19200, 115200]
 parities = [serial.PARITY_NONE, serial.PARITY_EVEN, serial.PARITY_ODD]
 
 def read_block(ser_conn, num_lines):
+    var = ""
     for line in range(num_lines):
-        print(ser_conn.readline())
-
+        var += ser_conn.readline()
+        print(var)
+    return ser_conn.readline()
 def query(ser_conn, message):
     ser_conn.write(message.encode())
     read_block(ser_conn, 10)
