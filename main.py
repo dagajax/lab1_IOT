@@ -1,3 +1,6 @@
+# Redi should be able to see this 
+# Test!!! 
+
 import serial
 baudrates = [9600, 19200, 115200]
 parities = [serial.PARITY_NONE, serial.PARITY_EVEN, serial.PARITY_ODD]
@@ -31,6 +34,7 @@ for first_char in upper_letters:
             passwd = first_char + second_char + third_char + '\r'
             print(passwd)
             query(serial_conn, passwd)
+
 
 # for first_char in nums:
 #     for second_char in nums:
