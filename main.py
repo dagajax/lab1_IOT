@@ -35,6 +35,7 @@ for first_char in upper_letters:
             print(passwd)
             query(serial_conn, passwd)
 
+
 # for first_char in nums:
 #     for second_char in nums:
 #         for third_char in nums:
