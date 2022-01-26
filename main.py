@@ -1,3 +1,6 @@
+#david should read this
+
+
 import serial
 baudrates = [9600, 19200, 115200]
 parities = [serial.PARITY_NONE, serial.PARITY_EVEN, serial.PARITY_ODD]
