@@ -1,6 +1,8 @@
 # David Garcia & Redi Tola 
 # line 2
 
+# Redi's Edit
+
 
 import serial
 baudrates = [9600, 19200, 115200]
