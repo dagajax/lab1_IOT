@@ -2,6 +2,9 @@
 # line 2
 
 # David test 
+# draft 1 only 
+
+# David branch 
 
 import serial
 baudrates = [9600, 19200, 115200]
