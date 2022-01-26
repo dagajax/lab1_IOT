@@ -1,4 +1,4 @@
-#david should read this
+# David Garcia & Redi Tola
 
 
 import serial
